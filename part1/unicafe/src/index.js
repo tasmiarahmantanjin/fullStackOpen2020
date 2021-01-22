@@ -4,10 +4,10 @@ import ReactDOM from 'react-dom'
 // Statistics component
 const Statistics = ({ varGood, varNeutral, varBad }) => {
 	const total = varGood + varNeutral + varBad;
-	// const average = varGood * 1 + varNeutral * 0 + varBad * -1;
 	const average = (varGood - varBad) / total
 	const positivePercent = `${(varGood / total) * 100}%`;
 
+// check if there is any feedback or not
 	if (varGood > 0 || varNeutral > 0 || varBad > 0) {
 		return (
 			<div>
@@ -20,11 +20,6 @@ const Statistics = ({ varGood, varNeutral, varBad }) => {
 						<Statistic text="all" value ={total} />
 						<Statistic text="average" value ={average} />
 						<Statistic text="positive" value ={positivePercent} />
-						{/* <p>good {varGood}</p>
-						<p>neutral {varNeutral}</p>
-						<p>bad {varBad}</p>
-						<p>average {average}</p>
-						<p>positive {positivePercent}</p> */}
 					</tbody>
 				</table>
 				
@@ -49,7 +44,7 @@ const Statistic = ({ text, value }) => (
 	</tr>
 );
 
-// Button component
+// create Button component
 	const Button = ({ handleClick, text }) => (
 		<button onClick={handleClick}>{text}</button>
   );
@@ -69,16 +64,13 @@ const App = () => {
 // handleClick events for bad vote
 	const handleBadClick = () => setBad(bad + 1)
 
-  return (
-    <div>
-      	<h1>give feedback</h1>
+	return (
+	<div>
+		<h1>give feedback</h1>
 		<Button handleClick={handleGoodClick} text="good"/>
 		<Button handleClick={handleNeutralClick} text="neutral"/>
 		<Button handleClick={handleBadClick} text="bad"/>
-
-
 		<Statistics varGood={good} varNeutral={neutral} varBad={bad}/>
-
     </div>
 )
 }

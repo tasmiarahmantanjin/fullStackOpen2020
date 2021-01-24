@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 
-// Componet Anacdote
+// Component Anacdote
 const Anecdote = ({ title, anecdote, votes }) => (
   <div>
     <h1>{title}</h1>
@@ -22,7 +22,7 @@ const App = (props) => {
     5: 0,
   })
 
-// genarate random anecdote id
+// generate random anecdote id
 const getRandomIndex = () => Math.floor(Math.random() * anecdotes.length);
 
 // function to handle click for the vote button 

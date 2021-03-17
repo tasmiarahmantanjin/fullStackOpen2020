@@ -33,6 +33,7 @@ app.get('/api/notes', (req, res) => {
   res.json(notes)
 })
 
+// Function to generate id for the new notes with POST request
 const generateId = () => {
   const maxId = notes.length > 0
     ? Math.max(...notes.map(n => n.id))

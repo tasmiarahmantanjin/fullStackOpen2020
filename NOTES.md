@@ -12,4 +12,6 @@
 	1. Conceptually, components are like JavaScript functions
 	2. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.
 	3. All React components must act like pure functions with respect to their props.
+
+### Part-2 Notes:
 	

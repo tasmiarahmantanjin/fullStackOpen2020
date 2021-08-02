@@ -24,7 +24,6 @@ const App = () => {
       setPersons([...persons, { name: newName, phone: newNumber }])
       setNewName('')
       setNewNumber('')
-      console.log(`New person: ${newName}`)
     }
   }
 

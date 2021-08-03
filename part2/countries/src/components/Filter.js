@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-
 const Filter = ({ country }) => {
 	const [filterArr, setFilterArr] = useState('')
 
